@@ -8,22 +8,44 @@
 
 /* Begin PBXBuildFile section */
 		8B3A769C21174A8C009A145B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B3A769B21174A8C009A145B /* AppDelegate.swift */; };
-		8B3A769E21174A8C009A145B /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B3A769D21174A8C009A145B /* FirstViewController.swift */; };
-		8B3A76A021174A8C009A145B /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B3A769F21174A8C009A145B /* SecondViewController.swift */; };
+		8B3A769E21174A8C009A145B /* Task1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B3A769D21174A8C009A145B /* Task1ViewController.swift */; };
+		8B3A76A021174A8C009A145B /* Task2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B3A769F21174A8C009A145B /* Task2ViewController.swift */; };
 		8B3A76A321174A8C009A145B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8B3A76A121174A8C009A145B /* Main.storyboard */; };
 		8B3A76A521174A8E009A145B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8B3A76A421174A8E009A145B /* Assets.xcassets */; };
 		8B3A76A821174A8E009A145B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8B3A76A621174A8E009A145B /* LaunchScreen.storyboard */; };
+		8B3A76B9211751B5009A145B /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B3A76B8211751B5009A145B /* Utils.swift */; };
+		8B3A76BB21175297009A145B /* Coordinate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B3A76BA21175297009A145B /* Coordinate.swift */; };
+		8B3A76BD211756D4009A145B /* CoordinateAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B3A76BC211756D4009A145B /* CoordinateAnnotation.swift */; };
+		8B3A76BF21175B03009A145B /* Coordinates_1000.csv in Resources */ = {isa = PBXBuildFile; fileRef = 8B3A76BE21175B03009A145B /* Coordinates_1000.csv */; };
+		8B3A76C12117771E009A145B /* Coordinates_100.csv in Resources */ = {isa = PBXBuildFile; fileRef = 8B3A76C02117771E009A145B /* Coordinates_100.csv */; };
+		8B3A76C721177888009A145B /* Task3ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B3A76C621177888009A145B /* Task3ViewController.swift */; };
+		8B3A76CA21177DB4009A145B /* VehicleAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B3A76C921177DB4009A145B /* VehicleAnnotation.swift */; };
+		8B3A76CC21178146009A145B /* Vehicle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B3A76CB21178146009A145B /* Vehicle.swift */; };
+		8B3A76CE211788D3009A145B /* realtimelocation.csv in Resources */ = {isa = PBXBuildFile; fileRef = 8B3A76CD211788D3009A145B /* realtimelocation.csv */; };
+		8B3A76D02117B342009A145B /* CoordinateAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B3A76CF2117B342009A145B /* CoordinateAnnotationView.swift */; };
+		8B3A76D22117B373009A145B /* VehicleAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B3A76D12117B373009A145B /* VehicleAnnotationView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		8B3A769821174A8C009A145B /* PredinaTasks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PredinaTasks.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8B3A769B21174A8C009A145B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		8B3A769D21174A8C009A145B /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
-		8B3A769F21174A8C009A145B /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		8B3A769D21174A8C009A145B /* Task1ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task1ViewController.swift; sourceTree = "<group>"; };
+		8B3A769F21174A8C009A145B /* Task2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task2ViewController.swift; sourceTree = "<group>"; };
 		8B3A76A221174A8C009A145B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8B3A76A421174A8E009A145B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8B3A76A721174A8E009A145B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8B3A76A921174A8E009A145B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8B3A76B8211751B5009A145B /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		8B3A76BA21175297009A145B /* Coordinate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinate.swift; sourceTree = "<group>"; };
+		8B3A76BC211756D4009A145B /* CoordinateAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinateAnnotation.swift; sourceTree = "<group>"; };
+		8B3A76BE21175B03009A145B /* Coordinates_1000.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Coordinates_1000.csv; sourceTree = "<group>"; };
+		8B3A76C02117771E009A145B /* Coordinates_100.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Coordinates_100.csv; sourceTree = "<group>"; };
+		8B3A76C621177888009A145B /* Task3ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task3ViewController.swift; sourceTree = "<group>"; };
+		8B3A76C921177DB4009A145B /* VehicleAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleAnnotation.swift; sourceTree = "<group>"; };
+		8B3A76CB21178146009A145B /* Vehicle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Vehicle.swift; sourceTree = "<group>"; };
+		8B3A76CD211788D3009A145B /* realtimelocation.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = realtimelocation.csv; sourceTree = "<group>"; };
+		8B3A76CF2117B342009A145B /* CoordinateAnnotationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinateAnnotationView.swift; sourceTree = "<group>"; };
+		8B3A76D12117B373009A145B /* VehicleAnnotationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleAnnotationView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,14 +79,57 @@
 			isa = PBXGroup;
 			children = (
 				8B3A769B21174A8C009A145B /* AppDelegate.swift */,
-				8B3A769D21174A8C009A145B /* FirstViewController.swift */,
-				8B3A769F21174A8C009A145B /* SecondViewController.swift */,
 				8B3A76A121174A8C009A145B /* Main.storyboard */,
-				8B3A76A421174A8E009A145B /* Assets.xcassets */,
 				8B3A76A621174A8E009A145B /* LaunchScreen.storyboard */,
+				8B3A76B8211751B5009A145B /* Utils.swift */,
 				8B3A76A921174A8E009A145B /* Info.plist */,
+				8B3A76C821177892009A145B /* Controllers */,
+				8B3A76C52117776C009A145B /* Models */,
+				8B3A76D32117B3C1009A145B /* Views */,
+				8B3A76B321174B3F009A145B /* Resources */,
 			);
 			path = PredinaTasks;
+			sourceTree = "<group>";
+		};
+		8B3A76B321174B3F009A145B /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				8B3A76C02117771E009A145B /* Coordinates_100.csv */,
+				8B3A76BE21175B03009A145B /* Coordinates_1000.csv */,
+				8B3A76CD211788D3009A145B /* realtimelocation.csv */,
+				8B3A76A421174A8E009A145B /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		8B3A76C52117776C009A145B /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				8B3A76BA21175297009A145B /* Coordinate.swift */,
+				8B3A76BC211756D4009A145B /* CoordinateAnnotation.swift */,
+				8B3A76CB21178146009A145B /* Vehicle.swift */,
+				8B3A76C921177DB4009A145B /* VehicleAnnotation.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		8B3A76C821177892009A145B /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				8B3A769D21174A8C009A145B /* Task1ViewController.swift */,
+				8B3A769F21174A8C009A145B /* Task2ViewController.swift */,
+				8B3A76C621177888009A145B /* Task3ViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		8B3A76D32117B3C1009A145B /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				8B3A76CF2117B342009A145B /* CoordinateAnnotationView.swift */,
+				8B3A76D12117B373009A145B /* VehicleAnnotationView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -125,6 +190,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8B3A76C12117771E009A145B /* Coordinates_100.csv in Resources */,
+				8B3A76BF21175B03009A145B /* Coordinates_1000.csv in Resources */,
+				8B3A76CE211788D3009A145B /* realtimelocation.csv in Resources */,
 				8B3A76A821174A8E009A145B /* LaunchScreen.storyboard in Resources */,
 				8B3A76A521174A8E009A145B /* Assets.xcassets in Resources */,
 				8B3A76A321174A8C009A145B /* Main.storyboard in Resources */,
@@ -138,9 +206,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8B3A76A021174A8C009A145B /* SecondViewController.swift in Sources */,
+				8B3A76D22117B373009A145B /* VehicleAnnotationView.swift in Sources */,
+				8B3A76CC21178146009A145B /* Vehicle.swift in Sources */,
+				8B3A76A021174A8C009A145B /* Task2ViewController.swift in Sources */,
 				8B3A769C21174A8C009A145B /* AppDelegate.swift in Sources */,
-				8B3A769E21174A8C009A145B /* FirstViewController.swift in Sources */,
+				8B3A76BD211756D4009A145B /* CoordinateAnnotation.swift in Sources */,
+				8B3A769E21174A8C009A145B /* Task1ViewController.swift in Sources */,
+				8B3A76C721177888009A145B /* Task3ViewController.swift in Sources */,
+				8B3A76CA21177DB4009A145B /* VehicleAnnotation.swift in Sources */,
+				8B3A76D02117B342009A145B /* CoordinateAnnotationView.swift in Sources */,
+				8B3A76B9211751B5009A145B /* Utils.swift in Sources */,
+				8B3A76BB21175297009A145B /* Coordinate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
