@@ -8,17 +8,17 @@
 
 import Foundation
 
-class Vehicle {
-    var time: String
-    var name: String
-    let latitude: Double
-    let longitude: Double
+class Vehicle: Codable {
+    var Time: String
+    var Vehicle: String
+    let Latitude: Double
+    let Longitude: Double
     
     init(time: String, name: String, latitude: Double, longitude: Double) {
-        self.time = time
-        self.name = name
-        self.latitude = latitude
-        self.longitude = longitude
+        self.Time = time
+        self.Vehicle = name
+        self.Latitude = latitude
+        self.Longitude = longitude
     }
 }
 

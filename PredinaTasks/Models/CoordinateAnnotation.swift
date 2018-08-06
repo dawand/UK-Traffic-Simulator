@@ -13,13 +13,13 @@ class CoordinateAnnotation: NSObject, MKAnnotation
 {
     let identifier: String
     let coordinate: CLLocationCoordinate2D
-    let traffic: Int
+    let color: Int
 
-    init(identifier: String, coordinate: CLLocationCoordinate2D, traffic: Int)
+    init(identifier: String, coordinate: CLLocationCoordinate2D, color: Int)
     {
         self.identifier = identifier
         self.coordinate = coordinate
-        self.traffic = traffic
+        self.color = color
         super.init()
     }
 }

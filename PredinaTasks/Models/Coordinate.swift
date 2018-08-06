@@ -8,14 +8,14 @@
 
 import Foundation
 
-class Coordinate {
-    let latitude:Double
-    let longitude:Double
-    var traffic:Int
+class Coordinate: Codable {
+    let Latitude:Double
+    let Longitude:Double
+    var Color:Int
     
-    init(latitude: Double, longitude: Double, traffic: Int) {
-        self.latitude = latitude
-        self.longitude = longitude
-        self.traffic = traffic
+    init(latitude: Double, longitude: Double, color: Int) {
+        self.Latitude = latitude
+        self.Longitude = longitude
+        self.Color = color
     }
 }

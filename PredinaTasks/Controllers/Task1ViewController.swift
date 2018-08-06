@@ -9,10 +9,8 @@
 import UIKit
 import MapKit
 
-let SAMPLE_SIZE = 100
-
-class Task1ViewController: UIViewController, MKMapViewDelegate {
-
+class Task1ViewController: UIViewController {
+    
     @IBOutlet var mapView: MKMapView!
     
     var coordinates = [Coordinate]()
@@ -22,53 +20,64 @@ class Task1ViewController: UIViewController, MKMapViewDelegate {
         super.viewDidLoad()
         
         self.mapView.delegate = self;
-
-        // 1. Load coordinates
+        
+        // Load coordinates
         loadCoordinates()
         
-        // 2. call updateTrafficMap method every second
+        // call updateTrafficMap method every second
         timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(updateTafficMap), userInfo: nil, repeats: true)
-        
     }
-
+    
     func loadCoordinates() {
         
-        if let csvRows = Utils.readDataFromCSV(fileName: "Coordinates_\(SAMPLE_SIZE)", fileType: "csv") {
-        
-            for row in csvRows {
-                if let lat = Double(row[0]), let long = Double(row[1]) {
-                    let coordinate = Coordinate(latitude: lat, longitude: long, traffic: 0)
-                    coordinates.append(coordinate)
+        if perform_locally {
+            if let csvRows = Utils.readDataFromCSV(fileName: "Coordinates_\(sample_size)", fileType: "csv") {
+                
+                for row in csvRows {
+                    if let lat = Double(row[0]), let long = Double(row[1]) {
+                        let coordinate = Coordinate(latitude: lat, longitude: long, color: 0)
+                        coordinates.append(coordinate)
+                    }
                 }
             }
+        } else {
+            ServiceManager.shared.getCoordinates(from: coordinates_api_link, completion: { (coordinates : [Coordinate]) in
+                self.coordinates = coordinates
+            })
         }
     }
     
     @objc func updateTafficMap(){
         
-        // 2.a. generate the random traffic numbers between 1-10 for each coordinate
-        coordinates.forEach {
-            let randomTraffic = Int(arc4random_uniform(10) + 1)
-            $0.traffic = randomTraffic
+        if perform_locally {
+            // generate the random traffic numbers between 1-10 for each coordinate
+            coordinates.forEach {
+                let randomTraffic = Int(arc4random_uniform(10) + 1)
+                $0.Color = randomTraffic
+            }
+        } else {
+            // fetch the updated colors from the server
+            loadCoordinates()
         }
         
-        // 2.b. remove previous annotations
+        // remove previous annotations
         self.mapView.removeAnnotations(mapView.annotations)
         
-        // 2.c. annotate them on the UK map
+        // annotate them on the UK map
         for coordinate in coordinates {
-            let annotation = CoordinateAnnotation(identifier: "\(coordinate.latitude)\(coordinate.longitude)", coordinate: CLLocationCoordinate2D(latitude: coordinate.latitude, longitude: coordinate.longitude), traffic: coordinate.traffic)
+            let annotation = CoordinateAnnotation(identifier: "\(coordinate.Latitude)\(coordinate.Longitude)", coordinate: CLLocationCoordinate2D(latitude: coordinate.Latitude, longitude: coordinate.Longitude), color: coordinate.Color)
             
             mapView.addAnnotation(annotation)
         }
     }
-    
-    // MKMapViewDelegate methods
+}
+
+extension Task1ViewController: MKMapViewDelegate {
     
     func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
         
         var annotationView : CoordinateAnnotationView
-
+        
         if let annotation = annotation as? CoordinateAnnotation {
             
             // reusing annotation by its identifier (lat+long)
@@ -78,12 +87,29 @@ class Task1ViewController: UIViewController, MKMapViewDelegate {
                 annotationView = CoordinateAnnotationView(annotation: annotation, reuseIdentifier: annotation.identifier)
             }
             
-            annotationView.setColor(traffic: annotation.traffic)
+            annotationView.setColor(traffic: annotation.color)
             
             return annotationView
         }
         
         return nil
+    }
+}
+
+extension Task1ViewController {
+    // Avoid running multiple timers simultaneously with the other tasks
+    
+    override func viewDidAppear(_ animated: Bool) {
+        
+        if !timer.isValid {
+            timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(updateTafficMap), userInfo: nil, repeats: true)
+        }
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        if let timer = timer {
+            timer.invalidate()
+        }
     }
 }
 

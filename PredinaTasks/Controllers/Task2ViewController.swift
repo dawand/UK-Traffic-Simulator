@@ -9,7 +9,7 @@
 import UIKit
 import MapKit
 
-class Task2ViewController: UIViewController, MKMapViewDelegate {
+class Task2ViewController: UIViewController {
 
     @IBOutlet var mapView: MKMapView!
     
@@ -29,34 +29,47 @@ class Task2ViewController: UIViewController, MKMapViewDelegate {
     
     func showVehicles() {
         
-        // 1. load vehicles for the current hh:mm
+        // load vehicles for the current hh:mm
         loadVehiclesData(time: Utils.getCurrentTime())
         // loadVehiclesData(time:"05:00")
         
-        // 2. show the vehicle annotations for the current time
-        showVehicleAnnotations()
     }
     
     func loadVehiclesData(time:String ){
-        if let csvRows = Utils.readDataFromCSVForTime(fileName: "realtimelocation", fileType: "csv", time: time) {
-            
-            for row in csvRows {
-                if let lat = Double(row[2]), let long = Double(row[3]) {
-                    let vehicle = Vehicle(time: row[0], name: row[1], latitude: lat, longitude: long)
-                    vehicles.append(vehicle)
+        
+        if perform_locally {
+            if let csvRows = Utils.readDataFromCSVForTime(fileName: "realtimelocation", fileType: "csv", time: time) {
+                
+                for row in csvRows {
+                    if let lat = Double(row[2]), let long = Double(row[3]) {
+                        let vehicle = Vehicle(time: row[0], name: row[1], latitude: lat, longitude: long)
+                        vehicles.append(vehicle)
+                    }
                 }
+                
+                // show the vehicle annotations for the current time
+                showVehicleAnnotations()
             }
+        } else {
+            ServiceManager.shared.getVehicles(from: "\(vehicles_api_link)\(Utils.getCurrentTime())", completion: { (vehicles : [Vehicle]) in
+                self.vehicles = vehicles
+                
+                DispatchQueue.main.async {
+                    // show the vehicle annotations for the current time
+                    self.showVehicleAnnotations()
+                }
+            })
         }
     }
     
     func showVehicleAnnotations() {
         
-        // 2.a. remove previous locations of vehicles
+        // remove previous locations of vehicles
         self.mapView.removeAnnotations(mapView.annotations)
         
-        // 2.b. annotate the vehicles on the map
+        // annotate the vehicles on the map
         for vehicle in vehicles {
-            let annotation = VehicleAnnotation(coordinate: CLLocationCoordinate2D(latitude: vehicle.latitude, longitude: vehicle.longitude), time: vehicle.time, name: vehicle.name)
+            let annotation = VehicleAnnotation(coordinate: CLLocationCoordinate2D(latitude: vehicle.Latitude, longitude: vehicle.Longitude), time: vehicle.Time, name: vehicle.Vehicle)
             
             mapView.addAnnotation(annotation)
         }
@@ -67,7 +80,9 @@ class Task2ViewController: UIViewController, MKMapViewDelegate {
     }
     
     // MKMapViewDelegate methods
+}
 
+extension Task2ViewController: MKMapViewDelegate {
     func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
         
         var annotationView : VehicleAnnotationView
@@ -86,3 +101,18 @@ class Task2ViewController: UIViewController, MKMapViewDelegate {
     }
 }
 
+extension Task2ViewController {
+    
+    override func viewDidAppear(_ animated: Bool) {
+        
+        if !timer.isValid {
+            timer = Timer.scheduledTimer(timeInterval: 60, target: self, selector: #selector(updateVehicles), userInfo: nil, repeats: true)
+        }
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        if let timer = timer {
+            timer.invalidate()
+        }
+    }
+}

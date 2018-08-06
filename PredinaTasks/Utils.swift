@@ -10,12 +10,12 @@ import Foundation
 
 class Utils {
     
-    // used for reading coordinates
+    // used for reading coordinates locally
     class func readDataFromCSV(fileName:String, fileType: String)-> [[String]]! {
         
         guard let filepath = Bundle.main.path(forResource: fileName, ofType: fileType)
             else {
-                print("\(fileName) does not exist!")
+                debugPrint("\(fileName) does not exist!")
                 return nil
         }
         
@@ -31,17 +31,17 @@ class Utils {
             return result
             
         } catch {
-            print("File Read Error for file \(filepath)")
+            debugPrint("File Read Error for file \(filepath)")
             return nil
         }
     }
     
-    // used for reading real time location of vehicles for a particlar hh:mm
+    // used for reading real time location of vehicles locally for a particlar hh:mm
     class func readDataFromCSVForTime(fileName:String, fileType: String, time: String)-> [[String]]!{
         
         guard let filepath = Bundle.main.path(forResource: fileName, ofType: fileType)
             else {
-                print("\(fileName) does not exist!")
+                debugPrint("\(fileName) does not exist!")
                 return nil
         }
         
@@ -62,7 +62,7 @@ class Utils {
             
             return result
         } catch {
-            print("File Read Error for file \(filepath)")
+            debugPrint("File Read Error for file \(filepath)")
             return nil
         }
     }
