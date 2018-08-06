@@ -25,7 +25,7 @@
 		8B3A76D02117B342009A145B /* CoordinateAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B3A76CF2117B342009A145B /* CoordinateAnnotationView.swift */; };
 		8B3A76D22117B373009A145B /* VehicleAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B3A76D12117B373009A145B /* VehicleAnnotationView.swift */; };
 		8B3A76D52117E7C3009A145B /* ServiceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B3A76D42117E7C3009A145B /* ServiceManager.swift */; };
-		8B3A76D72117ED3A009A145B /* configs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B3A76D62117ED3A009A145B /* configs.swift */; };
+		8B3A76D72117ED3A009A145B /* Configs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B3A76D62117ED3A009A145B /* Configs.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -49,7 +49,7 @@
 		8B3A76CF2117B342009A145B /* CoordinateAnnotationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinateAnnotationView.swift; sourceTree = "<group>"; };
 		8B3A76D12117B373009A145B /* VehicleAnnotationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleAnnotationView.swift; sourceTree = "<group>"; };
 		8B3A76D42117E7C3009A145B /* ServiceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceManager.swift; sourceTree = "<group>"; };
-		8B3A76D62117ED3A009A145B /* configs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = configs.swift; sourceTree = "<group>"; };
+		8B3A76D62117ED3A009A145B /* Configs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configs.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,7 +85,7 @@
 				8B3A769B21174A8C009A145B /* AppDelegate.swift */,
 				8B3A76A121174A8C009A145B /* Main.storyboard */,
 				8B3A76A621174A8E009A145B /* LaunchScreen.storyboard */,
-				8B3A76D62117ED3A009A145B /* configs.swift */,
+				8B3A76D62117ED3A009A145B /* Configs.swift */,
 				8B3A76D42117E7C3009A145B /* ServiceManager.swift */,
 				8B3A76B8211751B5009A145B /* Utils.swift */,
 				8B3A76A921174A8E009A145B /* Info.plist */,
@@ -216,7 +216,7 @@
 				8B3A76CC21178146009A145B /* Vehicle.swift in Sources */,
 				8B3A76A021174A8C009A145B /* Task2ViewController.swift in Sources */,
 				8B3A769C21174A8C009A145B /* AppDelegate.swift in Sources */,
-				8B3A76D72117ED3A009A145B /* configs.swift in Sources */,
+				8B3A76D72117ED3A009A145B /* Configs.swift in Sources */,
 				8B3A76BD211756D4009A145B /* CoordinateAnnotation.swift in Sources */,
 				8B3A769E21174A8C009A145B /* Task1ViewController.swift in Sources */,
 				8B3A76C721177888009A145B /* Task3ViewController.swift in Sources */,
