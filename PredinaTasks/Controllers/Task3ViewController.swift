@@ -18,6 +18,12 @@ class Task3ViewController: UIViewController {
     var coordinateTimer: Timer!
     var vehicleTimer: Timer!
     
+    var hour = 9
+    var minute = 0
+    
+    let vehicleUpdateTimeValue = 1.0
+    let coordinateUpdateTimeValue = 1.0
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -27,18 +33,21 @@ class Task3ViewController: UIViewController {
         loadCoordinates()
         
         // 2. Load Vehicles for current time
-        showVehicles()
+        loadVehicles(time: "0\(hour):0\(minute)")
         
         // 3. call updateTrafficMap method every second
-        coordinateTimer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(updateTafficMap), userInfo: nil, repeats: true)
+        coordinateTimer = Timer.scheduledTimer(timeInterval: coordinateUpdateTimeValue, target: self, selector: #selector(updateCoordinates), userInfo: nil, repeats: true)
         
         // 4. update the vehicles location every minute
-        vehicleTimer = Timer.scheduledTimer(timeInterval: 60.0, target: self, selector: #selector(updateVehicles), userInfo: nil, repeats: true)
+        vehicleTimer = Timer.scheduledTimer(timeInterval: vehicleUpdateTimeValue, target: self, selector: #selector(updateVehicles), userInfo: nil, repeats: true)
     }
     
     func loadCoordinates() {
         
         if perform_locally {
+            
+            coordinates.removeAll(keepingCapacity: true)
+            
             if let csvRows = Utils.readDataFromCSV(fileName: "Coordinates_\(sample_size)", fileType: "csv") {
                 
                 for row in csvRows {
@@ -47,60 +56,61 @@ class Task3ViewController: UIViewController {
                         coordinates.append(coordinate)
                     }
                 }
+                
+                DispatchQueue.main.async {
+                    self.showCoordinateAnnoations()
+                }
             }
         } else {
             ServiceManager.shared.getCoordinates(from: coordinates_api_link, completion: { (coordinates : [Coordinate]) in
                 self.coordinates = coordinates
                 
                 DispatchQueue.main.async {
-                    // show the vehicle annotations for the current time
-                    self.showVehicleAnnotations()
+                    self.showCoordinateAnnoations()
                 }
-                
             })
         }
     }
     
-    func showVehicles() {
+    func loadVehicles(time: String) {
         
-        // 2.a. load vehicles for the current hh:mm
-        loadVehiclesData(time: Utils.getCurrentTime())
-        //loadVehiclesData(time:"05:00")
-        
-        // 2.b. show the vehicle annotations for the current time
-        showVehicleAnnotations()
-    }
-    
-    func loadVehiclesData(time:String ){
         if perform_locally {
+            
+            vehicles.removeAll(keepingCapacity: true)
+            debugPrint("Getting cars locally for time: \(time)")
+            
             if let csvRows = Utils.readDataFromCSVForTime(fileName: "realtimelocation", fileType: "csv", time: time) {
                 
                 for row in csvRows {
                     if let lat = Double(row[2]), let long = Double(row[3]) {
                         let vehicle = Vehicle(time: row[0], name: row[1], latitude: lat, longitude: long)
-                        vehicles.append(vehicle)
+                  //      if vehicle.Vehicle == "Vehicle_847" {
+                            vehicles.append(vehicle)
+                  //      }
                     }
+                }
+                
+                debugPrint("Fetched \(vehicles.count) cars locally")
+
+                DispatchQueue.main.async {
+                    // 2.b. show the vehicle annotations for the current time
+                    self.showVehicleAnnotations()
                 }
             }
         } else {
             ServiceManager.shared.getVehicles(from: "\(vehicles_api_link)\(time)", completion: { (vehicles : [Vehicle]) in
                 self.vehicles = vehicles
+                print("The server returned \(vehicles.count) vehicles")
+                
+                DispatchQueue.main.async {
+                    // 2.b. show the vehicle annotations for the current time
+                    self.showVehicleAnnotations()
+                }
             })
         }
     }
     
-    @objc func updateTafficMap(){
-        
-        if perform_locally {
-            // generate the random traffic numbers between 1-10 for each coordinate
-            coordinates.forEach {
-                let randomTraffic = Int(arc4random_uniform(10) + 1)
-                $0.Color = randomTraffic
-            }
-        } else {
-            // fetch the updated colors from the server
-            loadCoordinates()
-        }
+    func showCoordinateAnnoations() {
         
         // Only remove previous traffic annotations
         mapView.annotations.forEach {
@@ -117,25 +127,63 @@ class Task3ViewController: UIViewController {
         }
     }
     
-    @objc func updateVehicles() {
-        showVehicles()
-    }
-    
     func showVehicleAnnotations() {
         
-        // 4.a. Only remove previous vehicle     annotations
+        // Only remove previous vehicle annotations
         mapView.annotations.forEach {
             if $0.isKind(of: VehicleAnnotation.self){
                 mapView.removeAnnotation($0)
             }
         }
         
-        // 4.b. plot them on the UK map
+        // plot them on the UK map
         for vehicle in vehicles {
             let annotation = VehicleAnnotation(coordinate: CLLocationCoordinate2D(latitude: vehicle.Latitude, longitude: vehicle.Longitude), time: vehicle.Time, name: vehicle.Vehicle)
             
             mapView.addAnnotation(annotation)
         }
+    }
+    
+    @objc func updateCoordinates(){
+        
+        if perform_locally {
+            // generate the random traffic numbers between 1-10 for each coordinate
+            coordinates.forEach {
+                let randomTraffic = Int(arc4random_uniform(10) + 1)
+                $0.Color = randomTraffic
+            }
+        } else {
+            // fetch the updated colors from the server
+            loadCoordinates()
+        }
+        
+        showCoordinateAnnoations()
+    }
+    
+    @objc func updateVehicles() {
+        //  showVehicles()
+        
+        minute += 1
+        
+        // to reset the minute back to zero
+        if minute > 59 {
+            minute = 0
+            hour += 1
+            if hour > 23 { hour = 0 }
+        }
+        
+        var stringMin = String(minute)
+        var stringHour = String(hour)
+        
+        // to add the leading zero
+        if stringMin.count == 1 {
+            stringMin = "0\(stringMin)"
+        }
+        if stringHour.count == 1 {
+            stringHour = "0\(stringHour)"
+        }
+        
+        loadVehicles(time:"\(stringHour):\(stringMin)")
     }
 }
 
@@ -179,11 +227,11 @@ extension Task3ViewController {
     override func viewDidAppear(_ animated: Bool) {
         
         if !coordinateTimer.isValid {
-            coordinateTimer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(updateTafficMap), userInfo: nil, repeats: true)
+            coordinateTimer = Timer.scheduledTimer(timeInterval: coordinateUpdateTimeValue, target: self, selector: #selector(updateCoordinates), userInfo: nil, repeats: true)
         }
         
         if !vehicleTimer.isValid {
-            vehicleTimer = Timer.scheduledTimer(timeInterval: 60.0, target: self, selector: #selector(updateVehicles), userInfo: nil, repeats: true)
+            vehicleTimer = Timer.scheduledTimer(timeInterval: vehicleUpdateTimeValue, target: self, selector: #selector(updateVehicles), userInfo: nil, repeats: true)
         }
 
     }

@@ -54,6 +54,7 @@ class ServiceManager: NSObject {
         //  Calling executeGetRequest(with:)
         executeGetRequest(with: urlString) { (data) in  // Data received from closure
             do {
+                
                 //  JSON parsing
                 let decoder = JSONDecoder()
                 let result = try decoder.decode([Vehicle].self, from: data!)

@@ -9,7 +9,7 @@
 import Foundation
 
 // change to true to fetch the data from the local CSV files and update the coordinate colours locally
-let perform_locally = true
+let perform_locally = false
 
 // API call links
 let base_url = "http://localhost:5000"

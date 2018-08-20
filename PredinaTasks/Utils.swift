@@ -68,7 +68,7 @@ class Utils {
     }
     
     // return current HH:mm
-    class func getCurrentTime() -> String {
+    class func getCurrentTime() -> (String,String) {
         
         let formatter = DateFormatter()
         formatter.dateFormat = "HH:mm"
@@ -77,6 +77,9 @@ class Utils {
         
         debugPrint(timeString)
         
-        return timeString
+        // return a tuple of HH and mm
+        
+        let hrMin = timeString.split(separator: ":")
+        return (String(hrMin[0]), String(hrMin[1]))
     }
 }
