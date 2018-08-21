@@ -21,14 +21,13 @@ class Task3ViewController: UIViewController {
     var hour = 9
     var minute = 0
     
-    let vehicleUpdateTimeValue = 1.0
-    let coordinateUpdateTimeValue = 1.0
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.mapView.delegate = self
         
+      //  registerAnnotationViewClasses()
+
         // 1. Load coordinates
         loadCoordinates()
         
@@ -119,6 +118,14 @@ class Task3ViewController: UIViewController {
             }
         }
         
+        if perform_locally {
+            // generate the random traffic numbers between 1-10 for each coordinate
+            coordinates.forEach {
+                let randomTraffic = Int(arc4random_uniform(10) + 1)
+                $0.Color = randomTraffic
+            }
+        }
+        
         // plot them on the UK map
         for coordinate in coordinates {
             let annotation = CoordinateAnnotation(identifier: "\(coordinate.Latitude)\(coordinate.Longitude)", coordinate: CLLocationCoordinate2D(latitude: coordinate.Latitude, longitude: coordinate.Longitude), color: coordinate.Color)
@@ -185,6 +192,11 @@ class Task3ViewController: UIViewController {
         
         loadVehicles(time:"\(stringHour):\(stringMin)")
     }
+    
+//    func registerAnnotationViewClasses() {
+//        mapView.register(CoordinateClusterView.self, forAnnotationViewWithReuseIdentifier: "CoordinateClusterView")
+//        mapView.register(ClusterView.self, forAnnotationViewWithReuseIdentifier: "VehicleClusterView")
+//    }
 }
 
 extension Task3ViewController: MKMapViewDelegate {
@@ -202,8 +214,9 @@ extension Task3ViewController: MKMapViewDelegate {
                 trafficAnnotationView = CoordinateAnnotationView(annotation: annotation, reuseIdentifier: annotation.identifier)
             }
             
+            trafficAnnotationView.clusteringIdentifier = "Coordinate"
             trafficAnnotationView.setColor(traffic: annotation.color)
-            
+
             return trafficAnnotationView
         }
             
@@ -215,10 +228,34 @@ extension Task3ViewController: MKMapViewDelegate {
                 vehicleAnnotationView = VehicleAnnotationView(annotation: annotation, reuseIdentifier: annotation.title)
             }
             
+            vehicleAnnotationView.clusteringIdentifier = "Vehicle"
+            
             return vehicleAnnotationView
         }
+        
         return nil
     }
+    
+    func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
+        if #available(iOS 11.0, *) {
+            if let cluster = view.annotation as? MKClusterAnnotation {
+                // display all annotations in that cluster
+                mapView.showAnnotations(cluster.memberAnnotations, animated: true)
+            }
+        }
+    }
+    
+//    func mapView(_ mapView: MKMapView, clusterAnnotationForMemberAnnotations memberAnnotations: [MKAnnotation]) -> MKClusterAnnotation {
+//        memberAnnotations.forEach {
+//            if $0.isKind(of: VehicleAnnotation.self){
+//                return ClusterView()
+//            } else {
+//                return CoordinateClusterView()
+//            }
+//        }
+//
+//        return ClusterView()
+//    }
 }
 
 extension Task3ViewController {
@@ -233,7 +270,6 @@ extension Task3ViewController {
         if !vehicleTimer.isValid {
             vehicleTimer = Timer.scheduledTimer(timeInterval: vehicleUpdateTimeValue, target: self, selector: #selector(updateVehicles), userInfo: nil, repeats: true)
         }
-
     }
     
     override func viewDidDisappear(_ animated: Bool) {

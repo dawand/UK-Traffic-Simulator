@@ -18,6 +18,13 @@ class VehicleAnnotationView: MKAnnotationView {
         self.canShowCallout = true
     }
     
+    override func prepareForDisplay() {
+        super.prepareForDisplay()
+        displayPriority = .defaultHigh
+   //     markerTintColor = UIColor.bicycleColor
+   //     glyphImage = #imageLiteral(resourceName: "bicycle")
+    }
+    
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
     }

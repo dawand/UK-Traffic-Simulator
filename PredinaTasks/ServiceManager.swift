@@ -45,7 +45,7 @@ class ServiceManager: NSObject {
                 
                 completion(result)
             } catch {
-                debugPrint("ERROR: could not retrieve response")
+                debugPrint("ERROR: could not retrieve coordinates")
             }
         }
     }

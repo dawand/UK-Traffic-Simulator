@@ -15,7 +15,7 @@ class CoordinateAnnotationView: MKAnnotationView {
     
     override init(annotation: MKAnnotation?, reuseIdentifier: String?) {
         super.init(annotation: annotation, reuseIdentifier: reuseIdentifier)
-        
+
         self.imageView = UIImageView(frame: CGRect(x: self.center.x, y: self.center.y, width: 20, height: 20))
         
         imageView.layer.cornerRadius = imageView.frame.size.width / 2;
@@ -30,9 +30,14 @@ class CoordinateAnnotationView: MKAnnotationView {
         super.init(coder: aDecoder)
     }
     
+    override func prepareForDisplay() {
+        super.prepareForDisplay()
+        // for clustering purposes
+        displayPriority = .defaultLow
+    }
+
     func setColor(traffic: Int){
         
-       
         // set the color of the pin accordingly
         switch traffic
         {
@@ -45,8 +50,7 @@ class CoordinateAnnotationView: MKAnnotationView {
         case 8...10:
             self.imageView.backgroundColor = UIColor.red
         default:
-            debugPrint("It should never reach here!")
-            self.imageView.backgroundColor = UIColor.black
+            self.imageView.backgroundColor = UIColor.green
         }
     }
 }

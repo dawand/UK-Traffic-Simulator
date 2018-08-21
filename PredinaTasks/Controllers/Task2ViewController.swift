@@ -26,8 +26,10 @@ class Task2ViewController: UIViewController {
         
         showVehicles(for: "0\(hour):0\(minute)")
         
+        registerAnnotationViewClasses()
+
         // update the vehicles location every minute
-        timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(updateVehicles), userInfo: nil, repeats: true)
+        timer = Timer.scheduledTimer(timeInterval: vehicleUpdateTimeValue, target: self, selector: #selector(updateVehicles), userInfo: nil, repeats: true)
     }
     
     func showVehicles(for time: String) {
@@ -112,24 +114,40 @@ class Task2ViewController: UIViewController {
         
         loadVehiclesData(time:"\(stringHour):\(stringMin)")
     }
+    
+    func registerAnnotationViewClasses() {
+        mapView.register(VehicleAnnotationView.self, forAnnotationViewWithReuseIdentifier: MKMapViewDefaultAnnotationViewReuseIdentifier)
+        mapView.register(VehicleClusterView.self, forAnnotationViewWithReuseIdentifier: MKMapViewDefaultClusterAnnotationViewReuseIdentifier)
+    }
 }
 
 extension Task2ViewController: MKMapViewDelegate {
     func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
-        
+
         var annotationView : VehicleAnnotationView
-        
+
         if let annotation = annotation as? VehicleAnnotation {
-            
+
             if let dequeuedView = mapView.dequeueReusableAnnotationView(withIdentifier: annotation.title!) as? VehicleAnnotationView {
                 annotationView = dequeuedView
             }else {
                 annotationView = VehicleAnnotationView(annotation: annotation, reuseIdentifier: annotation.title)
             }
-            
+
+            annotationView.clusteringIdentifier = "vehicle"
+
             return annotationView
         }
         return nil
+    }
+    
+    func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
+        if #available(iOS 11.0, *) {
+            if let cluster = view.annotation as? MKClusterAnnotation {
+                // display all annotations in that cluster
+                mapView.showAnnotations(cluster.memberAnnotations, animated: true)
+            }
+        }
     }
 }
 
@@ -138,7 +156,7 @@ extension Task2ViewController {
     override func viewDidAppear(_ animated: Bool) {
         
         if !timer.isValid {
-            timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(updateVehicles), userInfo: nil, repeats: true)
+            timer = Timer.scheduledTimer(timeInterval: vehicleUpdateTimeValue, target: self, selector: #selector(updateVehicles), userInfo: nil, repeats: true)
         }
     }
     

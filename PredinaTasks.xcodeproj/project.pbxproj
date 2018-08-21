@@ -27,6 +27,8 @@
 		8B3A76D52117E7C3009A145B /* ServiceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B3A76D42117E7C3009A145B /* ServiceManager.swift */; };
 		8B3A76D72117ED3A009A145B /* Configs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B3A76D62117ED3A009A145B /* Configs.swift */; };
 		8B71CA832125D06300AB1ABA /* Coordinates_50000.csv in Resources */ = {isa = PBXBuildFile; fileRef = 8B71CA822125D06200AB1ABA /* Coordinates_50000.csv */; };
+		8BE1EC6F212AFB4300E833AF /* VehicleClusterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BE1EC6E212AFB4200E833AF /* VehicleClusterView.swift */; };
+		8BE1EC71212B045500E833AF /* CoordinateClusterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BE1EC70212B045500E833AF /* CoordinateClusterView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +54,8 @@
 		8B3A76D42117E7C3009A145B /* ServiceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceManager.swift; sourceTree = "<group>"; };
 		8B3A76D62117ED3A009A145B /* Configs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configs.swift; sourceTree = "<group>"; };
 		8B71CA822125D06200AB1ABA /* Coordinates_50000.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Coordinates_50000.csv; sourceTree = "<group>"; };
+		8BE1EC6E212AFB4200E833AF /* VehicleClusterView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VehicleClusterView.swift; sourceTree = "<group>"; };
+		8BE1EC70212B045500E833AF /* CoordinateClusterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinateClusterView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,6 +141,8 @@
 			children = (
 				8B3A76CF2117B342009A145B /* CoordinateAnnotationView.swift */,
 				8B3A76D12117B373009A145B /* VehicleAnnotationView.swift */,
+				8BE1EC70212B045500E833AF /* CoordinateClusterView.swift */,
+				8BE1EC6E212AFB4200E833AF /* VehicleClusterView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -218,6 +224,7 @@
 			files = (
 				8B3A76D22117B373009A145B /* VehicleAnnotationView.swift in Sources */,
 				8B3A76CC21178146009A145B /* Vehicle.swift in Sources */,
+				8BE1EC71212B045500E833AF /* CoordinateClusterView.swift in Sources */,
 				8B3A76A021174A8C009A145B /* Task2ViewController.swift in Sources */,
 				8B3A769C21174A8C009A145B /* AppDelegate.swift in Sources */,
 				8B3A76D72117ED3A009A145B /* Configs.swift in Sources */,
@@ -229,6 +236,7 @@
 				8B3A76B9211751B5009A145B /* Utils.swift in Sources */,
 				8B3A76BB21175297009A145B /* Coordinate.swift in Sources */,
 				8B3A76D52117E7C3009A145B /* ServiceManager.swift in Sources */,
+				8BE1EC6F212AFB4300E833AF /* VehicleClusterView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
