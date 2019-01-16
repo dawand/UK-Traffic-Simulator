@@ -1,0 +1,435 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		8B3A769C21174A8C009A145B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B3A769B21174A8C009A145B /* AppDelegate.swift */; };
+		8B3A769E21174A8C009A145B /* Task1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B3A769D21174A8C009A145B /* Task1ViewController.swift */; };
+		8B3A76A021174A8C009A145B /* Task2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B3A769F21174A8C009A145B /* Task2ViewController.swift */; };
+		8B3A76A321174A8C009A145B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8B3A76A121174A8C009A145B /* Main.storyboard */; };
+		8B3A76A521174A8E009A145B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8B3A76A421174A8E009A145B /* Assets.xcassets */; };
+		8B3A76A821174A8E009A145B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8B3A76A621174A8E009A145B /* LaunchScreen.storyboard */; };
+		8B3A76B9211751B5009A145B /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B3A76B8211751B5009A145B /* Utils.swift */; };
+		8B3A76BB21175297009A145B /* Coordinate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B3A76BA21175297009A145B /* Coordinate.swift */; };
+		8B3A76BD211756D4009A145B /* CoordinateAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B3A76BC211756D4009A145B /* CoordinateAnnotation.swift */; };
+		8B3A76BF21175B03009A145B /* Coordinates_1000.csv in Resources */ = {isa = PBXBuildFile; fileRef = 8B3A76BE21175B03009A145B /* Coordinates_1000.csv */; };
+		8B3A76C12117771E009A145B /* Coordinates_100.csv in Resources */ = {isa = PBXBuildFile; fileRef = 8B3A76C02117771E009A145B /* Coordinates_100.csv */; };
+		8B3A76C721177888009A145B /* Task3ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B3A76C621177888009A145B /* Task3ViewController.swift */; };
+		8B3A76CA21177DB4009A145B /* VehicleAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B3A76C921177DB4009A145B /* VehicleAnnotation.swift */; };
+		8B3A76CC21178146009A145B /* Vehicle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B3A76CB21178146009A145B /* Vehicle.swift */; };
+		8B3A76CE211788D3009A145B /* realtimelocation.csv in Resources */ = {isa = PBXBuildFile; fileRef = 8B3A76CD211788D3009A145B /* realtimelocation.csv */; };
+		8B3A76D02117B342009A145B /* CoordinateAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B3A76CF2117B342009A145B /* CoordinateAnnotationView.swift */; };
+		8B3A76D22117B373009A145B /* VehicleAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B3A76D12117B373009A145B /* VehicleAnnotationView.swift */; };
+		8B3A76D52117E7C3009A145B /* ServiceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B3A76D42117E7C3009A145B /* ServiceManager.swift */; };
+		8B3A76D72117ED3A009A145B /* Configs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B3A76D62117ED3A009A145B /* Configs.swift */; };
+		8BE1EC6F212AFB4300E833AF /* VehicleClusterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BE1EC6E212AFB4200E833AF /* VehicleClusterView.swift */; };
+		8BE1EC71212B045500E833AF /* CoordinateClusterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BE1EC70212B045500E833AF /* CoordinateClusterView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		8B3A769821174A8C009A145B /* TrafficSimulator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TrafficSimulator.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8B3A769B21174A8C009A145B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		8B3A769D21174A8C009A145B /* Task1ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task1ViewController.swift; sourceTree = "<group>"; };
+		8B3A769F21174A8C009A145B /* Task2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task2ViewController.swift; sourceTree = "<group>"; };
+		8B3A76A221174A8C009A145B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		8B3A76A421174A8E009A145B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		8B3A76A721174A8E009A145B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		8B3A76A921174A8E009A145B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8B3A76B8211751B5009A145B /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		8B3A76BA21175297009A145B /* Coordinate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinate.swift; sourceTree = "<group>"; };
+		8B3A76BC211756D4009A145B /* CoordinateAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinateAnnotation.swift; sourceTree = "<group>"; };
+		8B3A76BE21175B03009A145B /* Coordinates_1000.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Coordinates_1000.csv; sourceTree = "<group>"; };
+		8B3A76C02117771E009A145B /* Coordinates_100.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Coordinates_100.csv; sourceTree = "<group>"; };
+		8B3A76C621177888009A145B /* Task3ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task3ViewController.swift; sourceTree = "<group>"; };
+		8B3A76C921177DB4009A145B /* VehicleAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleAnnotation.swift; sourceTree = "<group>"; };
+		8B3A76CB21178146009A145B /* Vehicle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Vehicle.swift; sourceTree = "<group>"; };
+		8B3A76CD211788D3009A145B /* realtimelocation.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = realtimelocation.csv; sourceTree = "<group>"; };
+		8B3A76CF2117B342009A145B /* CoordinateAnnotationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinateAnnotationView.swift; sourceTree = "<group>"; };
+		8B3A76D12117B373009A145B /* VehicleAnnotationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleAnnotationView.swift; sourceTree = "<group>"; };
+		8B3A76D42117E7C3009A145B /* ServiceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceManager.swift; sourceTree = "<group>"; };
+		8B3A76D62117ED3A009A145B /* Configs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configs.swift; sourceTree = "<group>"; };
+		8BE1EC6E212AFB4200E833AF /* VehicleClusterView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VehicleClusterView.swift; sourceTree = "<group>"; };
+		8BE1EC70212B045500E833AF /* CoordinateClusterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinateClusterView.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8B3A769521174A8C009A145B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		8B3A768F21174A8B009A145B = {
+			isa = PBXGroup;
+			children = (
+				8B3A769A21174A8C009A145B /* TrafficSimulator */,
+				8B3A769921174A8C009A145B /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		8B3A769921174A8C009A145B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8B3A769821174A8C009A145B /* TrafficSimulator.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8B3A769A21174A8C009A145B /* TrafficSimulator */ = {
+			isa = PBXGroup;
+			children = (
+				8B3A769B21174A8C009A145B /* AppDelegate.swift */,
+				8B3A76A121174A8C009A145B /* Main.storyboard */,
+				8B3A76A621174A8E009A145B /* LaunchScreen.storyboard */,
+				8B3A76D62117ED3A009A145B /* Configs.swift */,
+				8B3A76D42117E7C3009A145B /* ServiceManager.swift */,
+				8B3A76B8211751B5009A145B /* Utils.swift */,
+				8B3A76A921174A8E009A145B /* Info.plist */,
+				8B3A76C821177892009A145B /* Controllers */,
+				8B3A76C52117776C009A145B /* Models */,
+				8B3A76D32117B3C1009A145B /* Views */,
+				8B3A76B321174B3F009A145B /* Resources */,
+			);
+			path = TrafficSimulator;
+			sourceTree = "<group>";
+		};
+		8B3A76B321174B3F009A145B /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				8B3A76C02117771E009A145B /* Coordinates_100.csv */,
+				8B3A76BE21175B03009A145B /* Coordinates_1000.csv */,
+				8B3A76CD211788D3009A145B /* realtimelocation.csv */,
+				8B3A76A421174A8E009A145B /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		8B3A76C52117776C009A145B /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				8B3A76BA21175297009A145B /* Coordinate.swift */,
+				8B3A76BC211756D4009A145B /* CoordinateAnnotation.swift */,
+				8B3A76CB21178146009A145B /* Vehicle.swift */,
+				8B3A76C921177DB4009A145B /* VehicleAnnotation.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		8B3A76C821177892009A145B /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				8B3A769D21174A8C009A145B /* Task1ViewController.swift */,
+				8B3A769F21174A8C009A145B /* Task2ViewController.swift */,
+				8B3A76C621177888009A145B /* Task3ViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		8B3A76D32117B3C1009A145B /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				8B3A76CF2117B342009A145B /* CoordinateAnnotationView.swift */,
+				8B3A76D12117B373009A145B /* VehicleAnnotationView.swift */,
+				8BE1EC70212B045500E833AF /* CoordinateClusterView.swift */,
+				8BE1EC6E212AFB4200E833AF /* VehicleClusterView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8B3A769721174A8C009A145B /* TrafficSimulator */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8B3A76AC21174A8E009A145B /* Build configuration list for PBXNativeTarget "TrafficSimulator" */;
+			buildPhases = (
+				8B3A769421174A8C009A145B /* Sources */,
+				8B3A769521174A8C009A145B /* Frameworks */,
+				8B3A769621174A8C009A145B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TrafficSimulator;
+			productName = PredinaTasks;
+			productReference = 8B3A769821174A8C009A145B /* TrafficSimulator.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		8B3A769021174A8B009A145B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0940;
+				LastUpgradeCheck = 0940;
+				ORGANIZATIONNAME = "St Andrews";
+				TargetAttributes = {
+					8B3A769721174A8C009A145B = {
+						CreatedOnToolsVersion = 9.4.1;
+					};
+				};
+			};
+			buildConfigurationList = 8B3A769321174A8B009A145B /* Build configuration list for PBXProject "TrafficSimulator" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 8B3A768F21174A8B009A145B;
+			productRefGroup = 8B3A769921174A8C009A145B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8B3A769721174A8C009A145B /* TrafficSimulator */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8B3A769621174A8C009A145B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8B3A76C12117771E009A145B /* Coordinates_100.csv in Resources */,
+				8B3A76BF21175B03009A145B /* Coordinates_1000.csv in Resources */,
+				8B3A76CE211788D3009A145B /* realtimelocation.csv in Resources */,
+				8B3A76A821174A8E009A145B /* LaunchScreen.storyboard in Resources */,
+				8B3A76A521174A8E009A145B /* Assets.xcassets in Resources */,
+				8B3A76A321174A8C009A145B /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8B3A769421174A8C009A145B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8B3A76D22117B373009A145B /* VehicleAnnotationView.swift in Sources */,
+				8B3A76CC21178146009A145B /* Vehicle.swift in Sources */,
+				8BE1EC71212B045500E833AF /* CoordinateClusterView.swift in Sources */,
+				8B3A76A021174A8C009A145B /* Task2ViewController.swift in Sources */,
+				8B3A769C21174A8C009A145B /* AppDelegate.swift in Sources */,
+				8B3A76D72117ED3A009A145B /* Configs.swift in Sources */,
+				8B3A76BD211756D4009A145B /* CoordinateAnnotation.swift in Sources */,
+				8B3A769E21174A8C009A145B /* Task1ViewController.swift in Sources */,
+				8B3A76C721177888009A145B /* Task3ViewController.swift in Sources */,
+				8B3A76CA21177DB4009A145B /* VehicleAnnotation.swift in Sources */,
+				8B3A76D02117B342009A145B /* CoordinateAnnotationView.swift in Sources */,
+				8B3A76B9211751B5009A145B /* Utils.swift in Sources */,
+				8B3A76BB21175297009A145B /* Coordinate.swift in Sources */,
+				8B3A76D52117E7C3009A145B /* ServiceManager.swift in Sources */,
+				8BE1EC6F212AFB4300E833AF /* VehicleClusterView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		8B3A76A121174A8C009A145B /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8B3A76A221174A8C009A145B /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		8B3A76A621174A8E009A145B /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8B3A76A721174A8E009A145B /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		8B3A76AA21174A8E009A145B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		8B3A76AB21174A8E009A145B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		8B3A76AD21174A8E009A145B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2R8KNQM8C5;
+				INFOPLIST_FILE = TrafficSimulator/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "uk.ac.st-andrews.TrafficSimulator";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		8B3A76AE21174A8E009A145B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2R8KNQM8C5;
+				INFOPLIST_FILE = TrafficSimulator/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "uk.ac.st-andrews.TrafficSimulator";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		8B3A769321174A8B009A145B /* Build configuration list for PBXProject "TrafficSimulator" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8B3A76AA21174A8E009A145B /* Debug */,
+				8B3A76AB21174A8E009A145B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8B3A76AC21174A8E009A145B /* Build configuration list for PBXNativeTarget "TrafficSimulator" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8B3A76AD21174A8E009A145B /* Debug */,
+				8B3A76AE21174A8E009A145B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 8B3A769021174A8B009A145B /* Project object */;
+}

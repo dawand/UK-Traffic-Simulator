@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="49e-Tb-3d3">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Task 1-->
+        <scene sceneID="hNz-n2-bh7">
+            <objects>
+                <viewController id="9pv-A4-QxB" customClass="Task1ViewController" customModule="PredinaTasks" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="tsR-hK-woN">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="XUT-VM-72Q">
+                                <rect key="frame" x="0.0" y="20" width="375" height="598"/>
+                            </mapView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="XUT-VM-72Q" firstAttribute="bottom" secondItem="PQr-Ze-W5v" secondAttribute="bottom" id="FHx-We-yi4"/>
+                            <constraint firstAttribute="trailing" secondItem="XUT-VM-72Q" secondAttribute="trailing" id="FoZ-6I-nW0"/>
+                            <constraint firstItem="XUT-VM-72Q" firstAttribute="top" secondItem="PQr-Ze-W5v" secondAttribute="top" id="vsk-8I-pmT"/>
+                            <constraint firstItem="XUT-VM-72Q" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leading" id="yfe-WC-0D7"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="PQr-Ze-W5v"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Task 1" image="first" id="acW-dT-cKf"/>
+                    <connections>
+                        <outlet property="mapView" destination="XUT-VM-72Q" id="bMw-23-5ch"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="953" y="-235"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="yl2-sM-qoP">
+            <objects>
+                <tabBarController id="49e-Tb-3d3" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="W28-zg-YXA">
+                        <rect key="frame" x="0.0" y="975" width="768" height="49"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="9pv-A4-QxB" kind="relationship" relationship="viewControllers" id="u7Y-xg-7CH"/>
+                        <segue destination="E3h-PR-wyo" kind="relationship" relationship="viewControllers" id="qoh-q0-bys"/>
+                        <segue destination="Z4B-1D-5PK" kind="relationship" relationship="viewControllers" id="3xx-cc-el1"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-241" y="437"/>
+        </scene>
+        <!--Task 2-->
+        <scene sceneID="AQf-3P-ND4">
+            <objects>
+                <viewController id="E3h-PR-wyo" customClass="Task2ViewController" customModule="PredinaTasks" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="oxQ-Ld-Vdb">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="pZV-39-8z9">
+                                <rect key="frame" x="0.0" y="20" width="375" height="598"/>
+                            </mapView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="pZV-39-8z9" firstAttribute="top" secondItem="Kns-AE-cas" secondAttribute="top" id="9z1-AB-nIz"/>
+                            <constraint firstAttribute="trailing" secondItem="pZV-39-8z9" secondAttribute="trailing" id="BYk-UI-baT"/>
+                            <constraint firstItem="pZV-39-8z9" firstAttribute="bottom" secondItem="Kns-AE-cas" secondAttribute="bottom" id="Ne2-BU-iZh"/>
+                            <constraint firstItem="pZV-39-8z9" firstAttribute="leading" secondItem="oxQ-Ld-Vdb" secondAttribute="leading" id="n9e-7i-WYp"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Kns-AE-cas"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Task 2" image="second" id="fLh-nk-YSY"/>
+                    <connections>
+                        <outlet property="mapView" destination="pZV-39-8z9" id="fFd-mb-kzO"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dBI-Xa-FJJ" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="953" y="437"/>
+        </scene>
+        <!--Task 3-->
+        <scene sceneID="EFs-yF-oum">
+            <objects>
+                <viewController id="Z4B-1D-5PK" customClass="Task3ViewController" customModule="PredinaTasks" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Jec-Ea-bCj">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="LWG-na-g2L">
+                                <rect key="frame" x="0.0" y="20" width="375" height="598"/>
+                            </mapView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="LWG-na-g2L" firstAttribute="leading" secondItem="Jec-Ea-bCj" secondAttribute="leading" id="Aqi-lV-lmt"/>
+                            <constraint firstAttribute="trailing" secondItem="LWG-na-g2L" secondAttribute="trailing" id="IIn-VJ-Sq8"/>
+                            <constraint firstItem="LWG-na-g2L" firstAttribute="top" secondItem="Jp2-gn-qvp" secondAttribute="top" id="xsL-kb-2oj"/>
+                            <constraint firstItem="LWG-na-g2L" firstAttribute="bottom" secondItem="Jp2-gn-qvp" secondAttribute="bottom" id="yOB-8A-SAi"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Jp2-gn-qvp"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Task 3" image="first" id="awM-oK-3w0"/>
+                    <connections>
+                        <outlet property="mapView" destination="LWG-na-g2L" id="vb1-9y-32g"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="13i-Aq-cZu" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="953" y="1171"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="first" width="30" height="30"/>
+        <image name="second" width="30" height="30"/>
+    </resources>
+</document>

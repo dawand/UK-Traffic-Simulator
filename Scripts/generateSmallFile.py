@@ -1,7 +1,7 @@
 import pandas
 import random
 
-csvfile = "../PredinaTasks/Resources/Coordinates.csv"
+csvfile = "/Users/dawan/Downloads/Coordinates.csv"
 outputfile = "Coordinates_50000.csv"
 
 n = sum(1 for line in open(csvfile)) - 1 #number of records in file (excludes header)
