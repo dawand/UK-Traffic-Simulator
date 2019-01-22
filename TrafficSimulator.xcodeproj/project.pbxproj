@@ -8,8 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		8B3A769C21174A8C009A145B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B3A769B21174A8C009A145B /* AppDelegate.swift */; };
-		8B3A769E21174A8C009A145B /* Task1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B3A769D21174A8C009A145B /* Task1ViewController.swift */; };
-		8B3A76A021174A8C009A145B /* Task2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B3A769F21174A8C009A145B /* Task2ViewController.swift */; };
+		8B3A769E21174A8C009A145B /* CoordinatesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B3A769D21174A8C009A145B /* CoordinatesViewController.swift */; };
+		8B3A76A021174A8C009A145B /* VehiclesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B3A769F21174A8C009A145B /* VehiclesViewController.swift */; };
 		8B3A76A321174A8C009A145B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8B3A76A121174A8C009A145B /* Main.storyboard */; };
 		8B3A76A521174A8E009A145B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8B3A76A421174A8E009A145B /* Assets.xcassets */; };
 		8B3A76A821174A8E009A145B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8B3A76A621174A8E009A145B /* LaunchScreen.storyboard */; };
@@ -18,7 +18,7 @@
 		8B3A76BD211756D4009A145B /* CoordinateAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B3A76BC211756D4009A145B /* CoordinateAnnotation.swift */; };
 		8B3A76BF21175B03009A145B /* Coordinates_1000.csv in Resources */ = {isa = PBXBuildFile; fileRef = 8B3A76BE21175B03009A145B /* Coordinates_1000.csv */; };
 		8B3A76C12117771E009A145B /* Coordinates_100.csv in Resources */ = {isa = PBXBuildFile; fileRef = 8B3A76C02117771E009A145B /* Coordinates_100.csv */; };
-		8B3A76C721177888009A145B /* Task3ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B3A76C621177888009A145B /* Task3ViewController.swift */; };
+		8B3A76C721177888009A145B /* CombinedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B3A76C621177888009A145B /* CombinedViewController.swift */; };
 		8B3A76CA21177DB4009A145B /* VehicleAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B3A76C921177DB4009A145B /* VehicleAnnotation.swift */; };
 		8B3A76CC21178146009A145B /* Vehicle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B3A76CB21178146009A145B /* Vehicle.swift */; };
 		8B3A76CE211788D3009A145B /* realtimelocation.csv in Resources */ = {isa = PBXBuildFile; fileRef = 8B3A76CD211788D3009A145B /* realtimelocation.csv */; };
@@ -33,8 +33,8 @@
 /* Begin PBXFileReference section */
 		8B3A769821174A8C009A145B /* TrafficSimulator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TrafficSimulator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8B3A769B21174A8C009A145B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		8B3A769D21174A8C009A145B /* Task1ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task1ViewController.swift; sourceTree = "<group>"; };
-		8B3A769F21174A8C009A145B /* Task2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task2ViewController.swift; sourceTree = "<group>"; };
+		8B3A769D21174A8C009A145B /* CoordinatesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatesViewController.swift; sourceTree = "<group>"; };
+		8B3A769F21174A8C009A145B /* VehiclesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehiclesViewController.swift; sourceTree = "<group>"; };
 		8B3A76A221174A8C009A145B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8B3A76A421174A8E009A145B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8B3A76A721174A8E009A145B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -44,7 +44,7 @@
 		8B3A76BC211756D4009A145B /* CoordinateAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinateAnnotation.swift; sourceTree = "<group>"; };
 		8B3A76BE21175B03009A145B /* Coordinates_1000.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Coordinates_1000.csv; sourceTree = "<group>"; };
 		8B3A76C02117771E009A145B /* Coordinates_100.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Coordinates_100.csv; sourceTree = "<group>"; };
-		8B3A76C621177888009A145B /* Task3ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task3ViewController.swift; sourceTree = "<group>"; };
+		8B3A76C621177888009A145B /* CombinedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CombinedViewController.swift; sourceTree = "<group>"; };
 		8B3A76C921177DB4009A145B /* VehicleAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleAnnotation.swift; sourceTree = "<group>"; };
 		8B3A76CB21178146009A145B /* Vehicle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Vehicle.swift; sourceTree = "<group>"; };
 		8B3A76CD211788D3009A145B /* realtimelocation.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = realtimelocation.csv; sourceTree = "<group>"; };
@@ -126,9 +126,9 @@
 		8B3A76C821177892009A145B /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				8B3A769D21174A8C009A145B /* Task1ViewController.swift */,
-				8B3A769F21174A8C009A145B /* Task2ViewController.swift */,
-				8B3A76C621177888009A145B /* Task3ViewController.swift */,
+				8B3A769D21174A8C009A145B /* CoordinatesViewController.swift */,
+				8B3A769F21174A8C009A145B /* VehiclesViewController.swift */,
+				8B3A76C621177888009A145B /* CombinedViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -176,6 +176,7 @@
 				TargetAttributes = {
 					8B3A769721174A8C009A145B = {
 						CreatedOnToolsVersion = 9.4.1;
+						LastSwiftMigration = 1010;
 					};
 				};
 			};
@@ -221,12 +222,12 @@
 				8B3A76D22117B373009A145B /* VehicleAnnotationView.swift in Sources */,
 				8B3A76CC21178146009A145B /* Vehicle.swift in Sources */,
 				8BE1EC71212B045500E833AF /* CoordinateClusterView.swift in Sources */,
-				8B3A76A021174A8C009A145B /* Task2ViewController.swift in Sources */,
+				8B3A76A021174A8C009A145B /* VehiclesViewController.swift in Sources */,
 				8B3A769C21174A8C009A145B /* AppDelegate.swift in Sources */,
 				8B3A76D72117ED3A009A145B /* Configs.swift in Sources */,
 				8B3A76BD211756D4009A145B /* CoordinateAnnotation.swift in Sources */,
-				8B3A769E21174A8C009A145B /* Task1ViewController.swift in Sources */,
-				8B3A76C721177888009A145B /* Task3ViewController.swift in Sources */,
+				8B3A769E21174A8C009A145B /* CoordinatesViewController.swift in Sources */,
+				8B3A76C721177888009A145B /* CombinedViewController.swift in Sources */,
 				8B3A76CA21177DB4009A145B /* VehicleAnnotation.swift in Sources */,
 				8B3A76D02117B342009A145B /* CoordinateAnnotationView.swift in Sources */,
 				8B3A76B9211751B5009A145B /* Utils.swift in Sources */,
@@ -385,7 +386,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "uk.ac.st-andrews.TrafficSimulator";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -403,7 +404,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "uk.ac.st-andrews.TrafficSimulator";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

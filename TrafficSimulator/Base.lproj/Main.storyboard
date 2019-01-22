@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="49e-Tb-3d3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="49e-Tb-3d3">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Task 1-->
+        <!--Coordinates-->
         <scene sceneID="hNz-n2-bh7">
             <objects>
-                <viewController id="9pv-A4-QxB" customClass="Task1ViewController" customModule="PredinaTasks" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="9pv-A4-QxB" customClass="CoordinatesViewController" customModule="TrafficSimulator" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="tsR-hK-woN">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -31,7 +31,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="PQr-Ze-W5v"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Task 1" image="first" id="acW-dT-cKf"/>
+                    <tabBarItem key="tabBarItem" title="Coordinates" image="first" id="acW-dT-cKf"/>
                     <connections>
                         <outlet property="mapView" destination="XUT-VM-72Q" id="bMw-23-5ch"/>
                     </connections>
@@ -59,10 +59,10 @@
             </objects>
             <point key="canvasLocation" x="-241" y="437"/>
         </scene>
-        <!--Task 2-->
+        <!--Vehicles-->
         <scene sceneID="AQf-3P-ND4">
             <objects>
-                <viewController id="E3h-PR-wyo" customClass="Task2ViewController" customModule="PredinaTasks" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="E3h-PR-wyo" customClass="VehiclesViewController" customModule="TrafficSimulator" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="oxQ-Ld-Vdb">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -80,7 +80,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Kns-AE-cas"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Task 2" image="second" id="fLh-nk-YSY"/>
+                    <tabBarItem key="tabBarItem" title="Vehicles" image="second" id="fLh-nk-YSY"/>
                     <connections>
                         <outlet property="mapView" destination="pZV-39-8z9" id="fFd-mb-kzO"/>
                     </connections>
@@ -89,10 +89,10 @@
             </objects>
             <point key="canvasLocation" x="953" y="437"/>
         </scene>
-        <!--Task 3-->
+        <!--Combined-->
         <scene sceneID="EFs-yF-oum">
             <objects>
-                <viewController id="Z4B-1D-5PK" customClass="Task3ViewController" customModule="PredinaTasks" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Z4B-1D-5PK" customClass="CombinedViewController" customModule="TrafficSimulator" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Jec-Ea-bCj">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -110,7 +110,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Jp2-gn-qvp"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Task 3" image="first" id="awM-oK-3w0"/>
+                    <tabBarItem key="tabBarItem" title="Combined" image="first" id="awM-oK-3w0"/>
                     <connections>
                         <outlet property="mapView" destination="LWG-na-g2L" id="vb1-9y-32g"/>
                     </connections>

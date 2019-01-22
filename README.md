@@ -1,6 +1,8 @@
 
 # UK Traffic Simulator
 
+![](traffic_simulator.gif)
+
 This iOS app displays the position of the vehicles on the UK map in realtime. Note that the data is not included as I do not have a copyright to use the data. You need to acquire the following CSV files:
 
 1. The coordinates of the UK CSV file (Columns: Latitude and Longitude e.g. 51.341876, -0.061428)
@@ -21,9 +23,3 @@ Vehicle Realtime Location API link: http://localhost:5000/vehicles?time=05:00
 
 You can also use the local CSV files to fetch the coordinates and vehicles data.
 For that, you need to set `perform_locally` boolean to true in ```Configs.swift```
-
-## Todos
- - Handle Internet disconnections
- - Add a loading spinner
- - Customise Tab icons
- - .....
